@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b35">
+  <meta name="description" content="Play the two-player Tic Tac Toe game. Track wins and draws, highlight winning cells and use optional sound effects.">
+  <title>Play Tic Tac Toe — Game</title>
+  <link rel="stylesheet" href="assets/style.css">
+
+  <link rel="canonical" href="https://kadolisafa-droid.github.io/tictactoe/game.html">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Tic Tac Toe home">
+        <span class="brand-mark" aria-hidden="true">X·O</span>
+        <span class="brand-copy"><strong>Tic Tac Toe</strong><small>Think ahead. Make your move.</small></span>
+      </a>
+    </header>
+    <nav class="site-nav" aria-label="Main navigation"><a class="nav-link" href="index.html"><span class="nav-icon" aria-hidden="true">🏠</span><span>Home</span></a><a class="nav-link" href="game.html" aria-current="page"><span class="nav-icon" aria-hidden="true">🎮</span><span>Play Game</span></a><a class="nav-link" href="how-to-play.html"><span class="nav-icon" aria-hidden="true">📖</span><span>How to Play</span></a><a class="nav-link" href="features.html"><span class="nav-icon" aria-hidden="true">✨</span><span>Game Features</span></a><a class="nav-link" href="about.html"><span class="nav-icon" aria-hidden="true">ℹ️</span><span>About</span></a><a class="nav-link" href="contact.html"><span class="nav-icon" aria-hidden="true">✉️</span><span>Contact</span></a><a class="nav-link" href="privacy-policy.html"><span class="nav-icon" aria-hidden="true">🔒</span><span>Privacy Policy</span></a></nav>
+    <main><section class="game-shell" aria-label="Tic Tac Toe game">
+      <div class="game-intro">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Two-player game</span>
+        <h1>Let's Play!</h1>
+        <p>Take turns and get three in a row to win.</p>
+      </div>
+      <div class="sound-row"><button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true" aria-label="Mute sound effects"><span id="soundIcon" aria-hidden="true">🔊</span><span id="soundText">Sound on</span></button></div>
+      <section class="scoreboard" aria-label="Scoreboard">
+        <div class="score-card active" id="scoreCardX"><div class="score-label"><span class="score-symbol x">✕</span> Player X</div><strong class="score-number" id="scoreX">0</strong></div>
+        <div class="score-card" id="scoreCardDraw"><div class="score-label">Draws</div><strong class="score-number" id="scoreDraw">0</strong></div>
+        <div class="score-card" id="scoreCardO"><div class="score-label"><span class="score-symbol o">◯</span> Player O</div><strong class="score-number" id="scoreO">0</strong></div>
+      </section>
+      <div class="status-wrap"><div class="status" id="status" role="status" aria-live="polite"><span class="turn-mark x" id="turnMark">X</span><span id="statusText">Player X's turn</span></div></div>
+      <div class="board" id="board" role="group" aria-label="Tic Tac Toe board">
+        <button class="cell" type="button" data-index="0" aria-label="Top left, empty"></button>
+        <button class="cell" type="button" data-index="1" aria-label="Top middle, empty"></button>
+        <button class="cell" type="button" data-index="2" aria-label="Top right, empty"></button>
+        <button class="cell" type="button" data-index="3" aria-label="Middle left, empty"></button>
+        <button class="cell" type="button" data-index="4" aria-label="Center, empty"></button>
+        <button class="cell" type="button" data-index="5" aria-label="Middle right, empty"></button>
+        <button class="cell" type="button" data-index="6" aria-label="Bottom left, empty"></button>
+        <button class="cell" type="button" data-index="7" aria-label="Bottom middle, empty"></button>
+        <button class="cell" type="button" data-index="8" aria-label="Bottom right, empty"></button>
+      </div>
+      <div class="actions"><button class="button primary" id="nextRound" type="button">↻ &nbsp; New Round</button><button class="button" id="resetScore" type="button">Reset Scores</button></div>
+      <p class="hint" id="roundHint">Player X starts this round.</p>
+    </section></main>
+    <footer class="footer"><p>Thanks for playing. Take turns, think ahead and enjoy a friendly match.</p><nav class="footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><a href="game.html">Play Game</a><a href="how-to-play.html">How to Play</a><a href="features.html">Game Features</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy Policy</a></nav></footer>
+  </div>
+  <script src="assets/game.js" defer></script>
+</body>
+</html>
